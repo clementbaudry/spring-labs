@@ -1,3 +1,14 @@
 spring:
   application:
     name: lab-cache-feature
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  #jpa:
+  #  database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console.enabled: true
+  caching:
+    ttl: 30000 #5min in ms 5 x 60 x 100
